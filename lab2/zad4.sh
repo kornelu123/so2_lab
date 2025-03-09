@@ -24,7 +24,7 @@
 
 DIR="dane/icao"
 for file in $DIR/*; do
-  if ! [[ $(stat -c "%A" $file) =~ "w" ]]; then
+  if ! [[ -w $file ]]; then
     cat $file
   fi
 done
