@@ -29,10 +29,10 @@ input_file="tajne"
 
 pushd $DIR > /dev/null
 
-while IFS= read -r line; do
+while IFS= read line; do
   if [ ! -e "$line" ]; then
     echo "$line"
   fi
-done < "$input_file"
+done < $input_file
 
 popd > /dev/null

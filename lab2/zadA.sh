@@ -42,5 +42,7 @@ function check_subdir()
 }
 
 pushd "$DIR" > /dev/null
+
 check_subdir "deep"
+
 popd > /dev/null
